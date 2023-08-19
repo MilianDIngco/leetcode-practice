@@ -4,28 +4,38 @@
 public class VIIImXVId {
 
     public static void main(String[] args) {
-        System.out.println(equalFrequency("abbcc"));
+        System.out.println(equalFrequency("aaaaabb"));
     }
 
     public static boolean equalFrequency(String word) {
         // find the frequency of each letter
-        int minFreq = 999999, maxFreq = -1, sumDiff = 0;
+        int numOnes = 0;
+        int sum = 0, n = 0, min = 200, max = 0;
         int freq[] = new int[26];
-        for (int i = 0; i < word.length(); i++)
-            freq[((int) word.charAt(i)) - 97]++;
         for (int i = 0; i < word.length(); i++) {
-            int charIndex = ((int) word.charAt(i)) - 97;
-            minFreq = (freq[charIndex] < minFreq) ? freq[charIndex] : minFreq;
-            maxFreq = (freq[charIndex] > maxFreq) ? freq[charIndex] : maxFreq;
+            freq[((int) word.charAt(i)) - 97]++;
         }
         for (int i = 0; i < freq.length; i++) {
-
+            numOnes += (freq[i] == 1) ? 1 : 0;
+            if (freq[i] != 0) {
+                sum += freq[i];
+                n++;
+                min = (freq[i] < min) ? freq[i] : min;
+                max = (freq[i] > max) ? freq[i] : max;
+            }
         }
-        if (minFreq == maxFreq && maxFreq == 1)
-            return true;
-
-        // false when sum is > 1, sum == 0,
-        return (sumDiff == 1);
+        if (max - min > 1 && numOnes < 1)
+            return false;
+        if (numOnes == 1 || sum == n)
+            return (sum - 1) % (n - 1) == 0;
+        else
+            return (sum - 1) % n == 0;
     }
-
 }
+
+/*
+ * 1 1 2 3 % 2
+ * 1 1 1 1 1 2 6 % 6
+ * 1 2 2 5 4 % 2
+ * 5 2 7 6 2
+ */
