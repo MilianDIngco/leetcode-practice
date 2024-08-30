@@ -1,0 +1,46 @@
+Routine
+1) >= 1 FAANG/Grind75 problem per day
+2) try it
+3) If I don't know how to solve it, look at solutions
+4) type out the solution later in the day
+5) add to spreadsheet
+6) watch youtube tutorials of the solution
+
+To learn
+if input array is sorted
+- binary search
+- two pointers
+
+if given a tree
+- BFS
+- DFS
+
+if asked for all permutations/subsets
+- backtracking
+
+if given a linked list
+- two pointers
+
+if recursion is banned
+- stack
+
+if asked for max/min subarray/subset/options
+- dynamic programming
+
+if asked for top/least K items
+- heap
+
+if asked for common strings
+- map
+- tree
+
+if need to keep count of distinct elements
+- map
+- set
+else
+- map/set for O(1) time & O(n) space
+- sort input for O(nlogn) time and O(1) space
+
+Learned
+
+

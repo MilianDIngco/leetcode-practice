@@ -1,0 +1,60 @@
+h - left
+j - down
+k - up
+l - right
+$ - end of line
+G - end of file
+gg - top of file
+w - start of next word
+e - end of next word
+b - start of previous word
+
+i - insert before cursor
+a - append after cursor
+I - insert beginning of line
+A - append after line
+rw - replace word
+cc - change line
+ciw - replace word
+ce - replace to end of word
+u - undo
+ctrl r - redo
+>> - indent line
+<< - dedent line
+y - yank marked text
+#yy - yank # lines
+#dd - cut # lines
+:reg - show register content
+p - put
+x - delete character cursor is over
+
+sp sv - split vertical
+sp sh - split horizontal
+sp sx - close split
+sp se - split equal
+
+nh - clear search highlight
+sp to - open new tab
+sp tp - prev tab
+sp tn - next tab
+sp tx - close tab
+
+ys motion symbol - surround motion w/ symbol
+ys$symbol - surround till end of line w/ symbol
+ys #j symbol - surround lines w/ symbol
+yst symbol symbol - surround from cursor till symbol with symbol
+ysf symbol symbol - surround from cursor after symbol with symbol
+
+t symbol - till symbol - goes before symbol
+f symbol - find symbol - goes after symbol
+
+:set nornu - remove relative lines
+:set rnu - set relative lines
+
+:#,# s/"word"/"new word"/g
+
+]d - go to next error
+space ca - see code action (like if theres an error, do this to quick fix)
+  enter to select action
+
+z#l z#h move # character 
